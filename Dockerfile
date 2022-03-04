@@ -18,8 +18,6 @@ RUN set -ex \
 
     && chmod 777 /usr/src/app \ 
     
-    && git clone https://github.com/rootuttu/harsh \
-    
     && cp .netrc /root/.netrc \
 
     && chmod 600 /usr/src/app/.netrc \
