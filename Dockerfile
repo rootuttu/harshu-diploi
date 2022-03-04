@@ -1,12 +1,12 @@
 FROM harshpreets63/cutie:sweet
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/RailwayFuckYou
+
+RUN chmod 777 /usr/src/RailwayFuckYou
+
+RUN git clone https://amirulandalib:ghp_JiCensorMyAss@github.com/AmirulAndalib/sussyBaka.git .
 
 RUN apt update && upgrade
-
-RUN apt install git
-
-RUN git clone https://github.com/rootuttu/harsh
 
 RUN apt install sudo
 
@@ -14,20 +14,12 @@ RUN echo "Sudo :- it's ON"
 
 RUN sudo apt install wget curl
 
+RUN pip3 install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-RUN set -ex \
+RUN chmod 777 ./start.sh
 
-    && chmod 777 /usr/src/app \ 
-    
-    && cp .netrc /root/.netrc \
-
-    && chmod 600 /usr/src/app/.netrc \
-
-    && cp extract pextract /usr/local/bin \
-
-    && chmod +x aria.sh /usr/local/bin/extract /usr/local/bin/pextract
-
-RUN pip3 install -U pyrogram
+RUN echo "Ready To abuse Railway"
 
 CMD ["bash", "start.sh"]
