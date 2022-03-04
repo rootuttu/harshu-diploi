@@ -2,6 +2,16 @@ FROM harshpreets63/cutie:sweet
 
 WORKDIR /usr/src/app
 
+RUN git clone https://github.com/rootuttu/harsh
+
+RUN apt update && upgrade
+
+RUN apt install sudo
+
+RUN echo "Sudo :- it's ON"
+
+RUN sudo apt install wget curl
+
 COPY . .
 
 RUN set -ex \
@@ -10,12 +20,6 @@ RUN set -ex \
     
     && git clone https://github.com/rootuttu/harsh \
     
-    && apt install sudo \
-    
-    && echo "Sudo :- it's ON" \
-    
-    && sudo apt install wget curl \
-
     && cp .netrc /root/.netrc \
 
     && chmod 600 /usr/src/app/.netrc \
