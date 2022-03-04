@@ -2,9 +2,11 @@ FROM harshpreets63/cutie:sweet
 
 WORKDIR /usr/src/app
 
-RUN git clone https://github.com/rootuttu/harsh
-
 RUN apt update && upgrade
+
+RUN apt install git
+
+RUN git clone https://github.com/rootuttu/harsh
 
 RUN apt install sudo
 
