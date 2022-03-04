@@ -4,7 +4,7 @@ WORKDIR /usr/src/RailwayFuckYou
 
 RUN chmod 777 /usr/src/RailwayFuckYou
 
-RUN git clone https://amirulandalib:ghp_JiCensorMyAss@github.com/AmirulAndalib/sussyBaka.git .
+RUN git clone https://github.com/rootuttu/harsh.git .
 
 RUN apt update && upgrade
 
