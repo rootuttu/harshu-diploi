@@ -4,9 +4,11 @@ WORKDIR /usr/src/RailwayFuckYou
 
 RUN chmod 777 /usr/src/RailwayFuckYou
 
-RUN git clone https://github.com/rootuttu/harsh.git .
-
 RUN apt update && upgrade
+
+RUN apt install git
+
+RUN git clone https://github.com/rootuttu/harsh.git .
 
 RUN apt install sudo
 
